@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+:root {
+    --base-color: #000000;
+    --header-colour:#383e46;
+    --nav-text-color: #16a889;
+    --text-color: #2af5c9;
+    --background-color: #272c32;
+    --border-color: #16a889;
+    --border-color2:#383e46;
+    --link-color: #16a889;
+}
+
+#linkedin-icon, #github-icon{
+    display: flex;
+}
+#image-project-1, #image-project-2, #image-project-3, #image-project-4, #image-project-5, #image-project-6 {
+    display: flex;
+    height: 300px;
+    width: 500px;
+    border: 3px solid var(--border-color);
+
+}
+nav {
+    display: flex;
+    min-height: 8vh;
+    background-color: #272c32;
+    border-bottom: 3px solid var(--border-color2);
+    
+}
+
+a {
+    font-family: 'Poppins', sans-serif;
+    color: var(--nav-text-color);
+    text-decoration: none;
+}
+a :hover {
+    color: var(--text-color);
+    cursor: pointer;
+    text-decoration: none;
+}
