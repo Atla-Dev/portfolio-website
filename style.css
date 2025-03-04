@@ -25,12 +25,6 @@ body {
 #linkedin-icon, #github-icon{
     display: flex;
 }
-#image-project-1, #image-project-2, #image-project-3, #image-project-4, #image-project-5, #image-project-6 {
-    display: flex;
-    flex-wrap: wrap;
-    
-
-}
 
 #projects {
     display: grid;
@@ -38,6 +32,7 @@ body {
     grid-gap: 20px;
     justify-items: center;
     align-items: center;
+    border: 2px solid var(--border-colour);
 }
 
 h3 {
@@ -56,6 +51,7 @@ h3 {
     max-width: 100%;
     height: auto;
     object-fit: cover;
+    border: 2px solid var(--border-colour);
 }
 
 nav {
