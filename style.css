@@ -1,3 +1,12 @@
+/* This file is used to style the portfolio website
+
+For my memory, these are the CSS selectors:
+Class selectors use .class-name
+ID selectors use #id-name
+Element selectors use element-name
+*/
+
+
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +22,10 @@ body {
 
 :root {
     --base-color: #000000;
-    --header-colour:#383e46;
+    --header-color:#383e46;
     --nav-text-color: #16a889;
+    --nav-hover-color: #2af5c91e;	
+    --nav-hover-text-color: #1fffce;
     --text-color: #2af5c9;
     --background-color: #272c32;
     --border-color: #16a889;
@@ -26,6 +37,37 @@ body {
     display: flex;
 }
 
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #272c32;
+    border-bottom: 3px solid var(--border-color2);
+    
+}
+
+nav li {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    list-style: none;
+    display: inline;
+    margin: 0 10px;
+}
+
+a {
+    font-family: 'Poppins', sans-serif;
+    color: var(--nav-text-color);
+    text-decoration: none;
+}
+nav a:hover {
+    color: var(--nav-hover-text-color);
+    background-color: var(--nav-hover-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
 #projects {
     text-align: center;
 }
@@ -34,45 +76,40 @@ body {
 .project {
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    max-width: 100%;
+    width: calc(33.33% - 20px);
+    min-width: 300px;
+    max-width:400px;
+    margin-bottom: 20px;
 }
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    justify-items: center;
-    align-items: center;
-}
-
-.project img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    border: 2px solid var(--border-colour);
-}
-
-nav {
+.project-container {
     display: flex;
-    min-height: 8vh;
-    background-color: #272c32;
-    border-bottom: 3px solid var(--border-color2);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
     
 }
 
-a {
-    font-family: 'Poppins', sans-serif;
-    color: var(--nav-text-color);
-    text-decoration: none;
-}
-a :hover {
-    color: var(--text-color);
-    cursor: pointer;
-    text-decoration: none;
+.project img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid var(--border-color);
 }
 
 .divider {
   
-  border-bottom: 3px solid var(--border-color2);
+  border-bottom: 2px solid var(--border-color2);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272c32;
+    border-top: 3px solid var(--border-color2);
 }
